@@ -51,6 +51,16 @@ class RNN(nn.Module):
 
 # You may find the functions make_vocab() and make_indices from ffnn.py useful; you are free to copy them directly (or call those functions from this file)
 
+# Returns:
+# vectorized_data = A list of pairs (vector representation of input, y)
+def convert_to_vector_representation(data, word2vec_model):
+	vectorized_data = []
+	for temp in data:
+		temp_vectorized = []
+		for word in temp[0]:
+			temp_vectorized.append(word2vec_model.wv[word])
+		vectorized_data.append((torch.from_numpy(np.array(temp_vectorized)), temp[1]))
+	return vectorized_data
 
 # choose embedding_dim = 128, hidden_dim = 32, number_of_epochs = 10
 def main(embedding_dim, hidden_dim, number_of_epochs): # Add relevant parameters
@@ -62,21 +72,10 @@ def main(embedding_dim, hidden_dim, number_of_epochs): # Add relevant parameters
 		temp_list.append(data[0])
 	for data in valid_data:
 		temp_list.append(data[0])
-	word2vec_model = Word2Vec(temp_list, size = embedding_dim, min_count = 1)
-	vectorized_train = []
-	for data in train_data:
-		temp_vectorized = []
-		for word in data[0]:
-			temp_vectorized.append(word2vec_model.wv[word])
-		vectorized_train.append((torch.from_numpy(np.array(temp_vectorized)), data[1]))
-
+	word2vec_model = Word2Vec(temp_list, size = embedding_dim, window = 5, min_count = 1)
+	vectorized_train = convert_to_vector_representation(train_data, word2vec_model)
 	# or change to handle unk in validation data
-	vectorized_valid = []
-	for data in valid_data:
-		temp_vectorized = []
-		for word in data[0]:
-			temp_vectorized.append(word2vec_model.wv[word])
-		vectorized_valid.append((torch.from_numpy(np.array(temp_vectorized)), data[1]))
+	vectorized_valid = convert_to_vector_representation(valid_data, word2vec_model)
 
 	print("Fetched and Vectorized data")
 

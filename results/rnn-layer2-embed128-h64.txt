@@ -1,0 +1,103 @@
+Fetching data
+Fetched and Vectorized data
+Training for 10 epochs
+Training started for epoch 1
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:09<00:00,  2.70it/s]
+Training completed for epoch 1
+Training accuracy for epoch 1: 0.28075
+Training time for this epoch: 369.7921779155731
+Validation started for epoch 1
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.79it/s]
+Validation completed for epoch 1
+Validation accuracy for epoch 1: 0.298125
+Validation time for this epoch: 10.215220928192139
+Training started for epoch 2
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:12<00:00,  2.68it/s]
+Training completed for epoch 2
+Training accuracy for epoch 2: 0.2826875
+Training time for this epoch: 372.61009311676025
+Validation started for epoch 2
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.31it/s]
+Validation completed for epoch 2
+Validation accuracy for epoch 2: 0.211875
+Validation time for this epoch: 10.742540836334229
+Training started for epoch 3
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:19<00:00,  2.64it/s]
+Training completed for epoch 3
+Training accuracy for epoch 3: 0.2428125
+Training time for this epoch: 379.49401926994324
+Validation started for epoch 3
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.14it/s]
+Validation completed for epoch 3
+Validation accuracy for epoch 3: 0.269375
+Validation time for this epoch: 10.938868045806885
+Training started for epoch 4
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:12<00:00,  2.68it/s]
+Training completed for epoch 4
+Training accuracy for epoch 4: 0.2810625
+Training time for this epoch: 372.65965700149536
+Validation started for epoch 4
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.79it/s]
+Validation completed for epoch 4
+Validation accuracy for epoch 4: 0.228125
+Validation time for this epoch: 10.220015287399292
+Training started for epoch 5
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:06<00:00,  2.73it/s]
+Training completed for epoch 5
+Training accuracy for epoch 5: 0.2855
+Training time for this epoch: 366.59569478034973
+Validation started for epoch 5
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.79it/s]
+Validation completed for epoch 5
+Validation accuracy for epoch 5: 0.29375
+Validation time for this epoch: 10.214831113815308
+Training started for epoch 6
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:10<00:00,  2.70it/s]
+Training completed for epoch 6
+Training accuracy for epoch 6: 0.2840625
+Training time for this epoch: 370.57343006134033
+Validation started for epoch 6
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.80it/s]
+Validation completed for epoch 6
+Validation accuracy for epoch 6: 0.28875
+Validation time for this epoch: 10.205090045928955
+Training started for epoch 7
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:17<00:00,  2.65it/s]
+Training completed for epoch 7
+Training accuracy for epoch 7: 0.2703125
+Training time for this epoch: 377.81428599357605
+Validation started for epoch 7
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.84it/s]
+Validation completed for epoch 7
+Validation accuracy for epoch 7: 0.23625
+Validation time for this epoch: 10.168295860290527
+Training started for epoch 8
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:10<00:00,  2.70it/s]
+Training completed for epoch 8
+Training accuracy for epoch 8: 0.263875
+Training time for this epoch: 370.4993188381195
+Validation started for epoch 8
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.78it/s]
+Validation completed for epoch 8
+Validation accuracy for epoch 8: 0.244375
+Validation time for this epoch: 10.222863912582397
+Training started for epoch 9
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:08<00:00,  2.71it/s]
+Training completed for epoch 9
+Training accuracy for epoch 9: 0.27525
+Training time for this epoch: 368.86234188079834
+Validation started for epoch 9
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.64it/s]
+Validation completed for epoch 9
+Validation accuracy for epoch 9: 0.301875
+Validation time for this epoch: 10.375046253204346
+Training started for epoch 10
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1000/1000 [06:12<00:00,  2.68it/s]
+Training completed for epoch 10
+Training accuracy for epoch 10: 0.277375
+Training time for this epoch: 372.9271659851074
+Validation started for epoch 10
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:10<00:00,  9.57it/s]
+Validation completed for epoch 10
+Validation accuracy for epoch 10: 0.259375
+Validation time for this epoch: 10.450474262237549

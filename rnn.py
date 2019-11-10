@@ -17,15 +17,16 @@ unk = '<UNK>'
 
 
 class RNN(nn.Module):
-	def __init__(self, input_dim, h): # Add relevant parameters
+	def __init__(self, input_dim, h, num_layers): # Add relevant parameters
 		super(RNN, self).__init__()
 		# Fill in relevant parameters
 		# Ensure parameters are initialized to small values, see PyTorch documentation for guidance
 		self.h = h
+		self.num_layers = num_layers
 		self.rnn = nn.RNN(
 			input_size = input_dim,
 			hidden_size = h,
-			num_layers = 2,
+			num_layers = num_layers,
 			batch_first = True,
 		)
 		self.out = nn.Linear(h, 5)
@@ -42,7 +43,7 @@ class RNN(nn.Module):
 		# output: (batch_size, time_step, output_size)
 
 		# or: initial_h_state = torch.randn(1, inputs.size(0), self.h)
-		initial_h_state = torch.zeros(2, inputs.size(0), self.h)
+		initial_h_state = torch.zeros(self.num_layers, inputs.size(0), self.h)
 		output, h_state = self.rnn(inputs, initial_h_state)
 		output_score = self.out(output[:, -1, :])
 		predicted_vector = self.softmax(output_score) # Remember to include the predicted unnormalized scores which should be normalized into a (log) probability distribution
@@ -63,7 +64,7 @@ def convert_to_vector_representation(data, word2vec_model):
 	return vectorized_data
 
 # choose embedding_dim = 128, hidden_dim = 32, number_of_epochs = 10
-def main(embedding_dim, hidden_dim, number_of_epochs): # Add relevant parameters
+def main(embedding_dim, hidden_dim, number_of_epochs, num_layers): # Add relevant parameters
 	print("Fetching data")
 	train_data, valid_data = fetch_data() # X_data is a list of pairs (document, y); y in {0,1,2,3,4}
 
@@ -88,7 +89,7 @@ def main(embedding_dim, hidden_dim, number_of_epochs): # Add relevant parameters
 	# Option 3 will be the most time consuming, so we do not recommend starting with this
 
 	# similar to ffnn1fix.py, make some changes in validation part, also check the early stopping condition
-	model = RNN(embedding_dim, hidden_dim) # Fill in parameters
+	model = RNN(embedding_dim, hidden_dim, num_layers) # Fill in parameters
 	optimizer = optim.SGD(model.parameters(),lr=0.01, momentum=0.9)
 	#optimizer = optim.Adam(model.parameters(), lr=0.01)
 
@@ -159,7 +160,7 @@ def main(embedding_dim, hidden_dim, number_of_epochs): # Add relevant parameters
 				counter = 0
 			else:
 				counter += 1
-			print("Counter: {}".format(counter))
+			#print("Counter: {}".format(counter))
 			if counter == number_to_stop:
 				stop_flag = True
 				break

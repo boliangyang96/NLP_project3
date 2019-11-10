@@ -11,7 +11,8 @@ def main():
 		embedding_dim = 128
 		hidden_dim = 64
 		number_of_epochs = 10
-		rnn_main(embedding_dim=embedding_dim, hidden_dim=hidden_dim, number_of_epochs=number_of_epochs)
+		num_layers = 2
+		rnn_main(embedding_dim=embedding_dim, hidden_dim=hidden_dim, number_of_epochs=number_of_epochs, num_layers=num_layers)
 	elif FLAG == 'FFNN':
 		hidden_dim = 32
 		number_of_epochs = 10

@@ -119,7 +119,7 @@ def main(hidden_dim, number_of_epochs):
 		print("Training completed for epoch {}".format(epoch + 1))
 		print("Training accuracy for epoch {}: {}".format(epoch + 1, correct / total))
 		print("Training time for this epoch: {}".format(time.time() - start_time))
-		loss = None
+		#loss = None
 		correct = 0
 		total = 0
 		start_time = time.time()
@@ -128,7 +128,7 @@ def main(hidden_dim, number_of_epochs):
 		minibatch_size = 16 
 		N = len(valid_data) 
 		for minibatch_index in tqdm(range(N // minibatch_size)):
-			optimizer.zero_grad()
+			#optimizer.zero_grad()
 			#loss = None # error, no need to do loss.backward() in validation data
 			for example_index in range(minibatch_size):
 				input_vector, gold_label = valid_data[minibatch_index * minibatch_size + example_index]

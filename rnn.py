@@ -87,10 +87,17 @@ def main(embedding_dim, hidden_dim, number_of_epochs): # Add relevant parameters
 	# 3) You do the same as 2) but you train (this is called fine-tuning) the pretrained embeddings further. 
 	# Option 3 will be the most time consuming, so we do not recommend starting with this
 
-	# as in ffnn1fix.py
+	# similar to ffnn1fix.py, make some changes in validation part, also check the early stopping condition
 	model = RNN(embedding_dim, hidden_dim) # Fill in parameters
-	#optimizer = optim.SGD(model.parameters()) 
 	optimizer = optim.SGD(model.parameters(),lr=0.01, momentum=0.9)
+	#optimizer = optim.Adam(model.parameters(), lr=0.01)
+
+	# early stopping condition
+	min_valid_loss = 1e10 # keep track of the minimum validation loss
+	number_to_stop = 5 # when reach this number, do the early stopping
+	counter = 0 # keep track of the number of epoches that do not decrease from minimum loss
+	stop_flag = False # early stopping flag
+
 	print("Training for {} epochs".format(number_of_epochs))
 	for epoch in range(number_of_epochs):
 		model.train()
@@ -123,35 +130,47 @@ def main(embedding_dim, hidden_dim, number_of_epochs): # Add relevant parameters
 		print("Training completed for epoch {}".format(epoch + 1))
 		print("Training accuracy for epoch {}: {}".format(epoch + 1, correct / total))
 		print("Training time for this epoch: {}".format(time.time() - start_time))
-		#loss = None
+		loss = None
 		correct = 0
 		total = 0
 		start_time = time.time()
 		print("Validation started for epoch {}".format(epoch + 1))
 		random.shuffle(vectorized_valid) # Good practice to shuffle order of validation data
-		minibatch_size = 16 
+		minibatch_size = len(vectorized_valid) 
 		N = len(vectorized_valid) 
 		for minibatch_index in tqdm(range(N // minibatch_size)):
-			optimizer.zero_grad()
-			#loss = None
+			loss = None
 			for example_index in range(minibatch_size):
 				input_vector, gold_label = vectorized_valid[minibatch_index * minibatch_size + example_index]
 				predicted_vector = model(input_vector.unsqueeze(0))
 				predicted_label = torch.argmax(predicted_vector)
 				correct += int(predicted_label == gold_label)
 				total += 1
-				#example_loss = model.compute_Loss(predicted_vector.view(1,-1), torch.tensor([gold_label]))
-				#if loss is None:
-					#loss = example_loss
-				#else:
-					#loss += example_loss
-			#loss = loss / minibatch_size
-			#loss.backward()
-			#optimizer.step()
+				example_loss = model.compute_Loss(predicted_vector.view(1,-1), torch.tensor([gold_label]))
+				if loss is None:
+					loss = example_loss
+				else:
+					loss += example_loss
+			loss = loss / minibatch_size
+			
+			# check for early stopping condition
+			if loss < min_valid_loss:
+				min_valid_loss = loss
+				counter = 0
+			else:
+				counter += 1
+			print("Counter: {}".format(counter))
+			if counter == number_to_stop:
+				stop_flag = True
+				break
+
 		print("Validation completed for epoch {}".format(epoch + 1))
 		print("Validation accuracy for epoch {}: {}".format(epoch + 1, correct / total))
 		print("Validation time for this epoch: {}".format(time.time() - start_time))
 
+		if stop_flag:
+			print("Early stopping, with minimum validation loss {}".format(min_valid_loss))
+			break
 
 
 

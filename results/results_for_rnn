@@ -1,0 +1,347 @@
+Embedding = 128, hidden = 32, num_layers = 1
+Fetching data
+Fetched and Vectorized data
+Training for 10 epochs
+Training started for epoch 1
+  0%|          | 0/1000 [00:00<?, ?it/s]/Users/lishenghua/Desktop/CS5740_NLP/P3/p3-master/rnn.py:50: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  output_score)  # Remember to include the predicted unnormalized scores which should be normalized into a (log) probability distribution
+100%|██████████| 1000/1000 [03:06<00:00,  5.37it/s]
+Training completed for epoch 1
+Training accuracy for epoch 1: 0.2625
+Training time for this epoch: 186.31337308883667
+Validation started for epoch 1
+100%|██████████| 1/1 [00:04<00:00,  4.78s/it]
+Validation completed for epoch 1
+Validation accuracy for epoch 1: 0.2675
+Validation time for this epoch: 4.780314922332764
+Training started for epoch 2
+100%|██████████| 1000/1000 [03:03<00:00,  5.44it/s]
+Training completed for epoch 2
+Training accuracy for epoch 2: 0.3031875
+Training time for this epoch: 183.91597509384155
+Validation started for epoch 2
+100%|██████████| 1/1 [00:05<00:00,  5.27s/it]
+Validation completed for epoch 2
+Validation accuracy for epoch 2: 0.26625
+Validation time for this epoch: 5.268901824951172
+Training started for epoch 3
+100%|██████████| 1000/1000 [03:05<00:00,  5.40it/s]
+Training completed for epoch 3
+Training accuracy for epoch 3: 0.3043125
+Training time for this epoch: 185.0343632698059
+Validation started for epoch 3
+100%|██████████| 1/1 [00:05<00:00,  5.17s/it]
+Validation completed for epoch 3
+Validation accuracy for epoch 3: 0.270625
+Validation time for this epoch: 5.169497966766357
+Training started for epoch 4
+100%|██████████| 1000/1000 [03:08<00:00,  5.31it/s]
+Training completed for epoch 4
+Training accuracy for epoch 4: 0.2825
+Training time for this epoch: 188.49486684799194
+Validation started for epoch 4
+100%|██████████| 1/1 [00:04<00:00,  4.76s/it]
+Validation completed for epoch 4
+Validation accuracy for epoch 4: 0.264375
+Validation time for this epoch: 4.758150100708008
+Training started for epoch 5
+100%|██████████| 1000/1000 [03:04<00:00,  5.42it/s]
+Training completed for epoch 5
+Training accuracy for epoch 5: 0.302
+Training time for this epoch: 184.56596517562866
+Validation started for epoch 5
+100%|██████████| 1/1 [00:04<00:00,  4.92s/it]
+Validation completed for epoch 5
+Validation accuracy for epoch 5: 0.25875
+Validation time for this epoch: 4.924459934234619
+Training started for epoch 6
+100%|█████████▉| 999/1000 [03:05<00:00,  5.89it/s]Training completed for epoch 6
+100%|██████████| 1000/1000 [03:05<00:00,  5.39it/s]
+Training accuracy for epoch 6: 0.3074375
+Training time for this epoch: 185.37072801589966
+Validation started for epoch 6
+  0%|          | 0/1 [00:00<?, ?it/s]Validation completed for epoch 6
+Validation accuracy for epoch 6: 0.298125
+Validation time for this epoch: 4.617496013641357
+  0%|          | 0/1 [00:04<?, ?it/s]
+Early stopping, with minimum validation loss 1.569884181022644
+
+
+
+
+
+Embedding = 128, hidden = 64, num_layer = 1
+Fetching data
+Fetched and Vectorized data
+Training for 10 epochs
+Training started for epoch 1
+  0%|          | 0/1000 [00:00<?, ?it/s]/Users/lishenghua/Desktop/CS5740_NLP/P3/p3-master/rnn.py:50: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  output_score)  # Remember to include the predicted unnormalized scores which should be normalized into a (log) probability distribution
+100%|██████████| 1000/1000 [03:26<00:00,  4.84it/s]
+Training completed for epoch 1
+Training accuracy for epoch 1: 0.2783125
+Training time for this epoch: 206.66153287887573
+Validation started for epoch 1
+100%|██████████| 1/1 [00:05<00:00,  5.23s/it]
+Validation completed for epoch 1
+Validation accuracy for epoch 1: 0.315
+Validation time for this epoch: 5.23374605178833
+Training started for epoch 2
+100%|██████████| 1000/1000 [03:22<00:00,  4.93it/s]
+Training completed for epoch 2
+Training accuracy for epoch 2: 0.30225
+Training time for this epoch: 202.8410930633545
+Validation started for epoch 2
+100%|██████████| 1/1 [00:05<00:00,  5.28s/it]
+Validation completed for epoch 2
+Validation accuracy for epoch 2: 0.293125
+Validation time for this epoch: 5.284036874771118
+Training started for epoch 3
+100%|██████████| 1000/1000 [03:29<00:00,  4.76it/s]
+Training completed for epoch 3
+Training accuracy for epoch 3: 0.297
+Training time for this epoch: 209.91004395484924
+Validation started for epoch 3
+100%|██████████| 1/1 [00:05<00:00,  5.71s/it]
+Validation completed for epoch 3
+Validation accuracy for epoch 3: 0.275625
+Validation time for this epoch: 5.713392019271851
+Training started for epoch 4
+100%|██████████| 1000/1000 [03:29<00:00,  4.78it/s]
+Training completed for epoch 4
+Training accuracy for epoch 4: 0.317875
+Training time for this epoch: 209.10580682754517
+Validation started for epoch 4
+100%|██████████| 1/1 [00:06<00:00,  6.25s/it]
+Validation completed for epoch 4
+Validation accuracy for epoch 4: 0.313125
+Validation time for this epoch: 6.252997159957886
+Training started for epoch 5
+100%|█████████▉| 999/1000 [03:21<00:00,  4.96it/s]Training completed for epoch 5
+100%|██████████| 1000/1000 [03:21<00:00,  4.95it/s]
+Training accuracy for epoch 5: 0.306875
+Training time for this epoch: 201.92655324935913
+  0%|          | 0/1 [00:00<?, ?it/s]Validation started for epoch 5
+Validation completed for epoch 5
+100%|██████████| 1/1 [00:04<00:00,  4.93s/it]
+Validation accuracy for epoch 5: 0.290625
+Validation time for this epoch: 4.929062128067017
+Training started for epoch 6
+100%|██████████| 1000/1000 [03:27<00:00,  4.83it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]Training completed for epoch 6
+Training accuracy for epoch 6: 0.27225
+Training time for this epoch: 207.0328450202942
+Validation started for epoch 6
+100%|██████████| 1/1 [00:05<00:00,  5.24s/it]
+Validation completed for epoch 6
+Validation accuracy for epoch 6: 0.231875
+Validation time for this epoch: 5.243361949920654
+Training started for epoch 7
+100%|█████████▉| 999/1000 [03:27<00:00,  5.40it/s]Training completed for epoch 7
+100%|██████████| 1000/1000 [03:27<00:00,  4.81it/s]
+Training accuracy for epoch 7: 0.261
+  0%|          | 0/1 [00:00<?, ?it/s]Training time for this epoch: 207.97193908691406
+Validation started for epoch 7
+Validation completed for epoch 7
+Validation accuracy for epoch 7: 0.270625
+Validation time for this epoch: 5.143701076507568
+100%|██████████| 1/1 [00:05<00:00,  5.14s/it]
+  0%|          | 0/1000 [00:00<?, ?it/s]Training started for epoch 8
+100%|██████████| 1000/1000 [03:30<00:00,  4.75it/s]
+Training completed for epoch 8
+  0%|          | 0/1 [00:00<?, ?it/s]Training accuracy for epoch 8: 0.284125
+Training time for this epoch: 210.66831469535828
+Validation started for epoch 8
+100%|██████████| 1/1 [00:04<00:00,  4.93s/it]
+Validation completed for epoch 8
+Validation accuracy for epoch 8: 0.26875
+Validation time for this epoch: 4.928245782852173
+  0%|          | 0/1000 [00:00<?, ?it/s]Training started for epoch 9
+100%|██████████| 1000/1000 [03:28<00:00,  4.80it/s]
+Training completed for epoch 9
+Training accuracy for epoch 9: 0.2923125
+Training time for this epoch: 208.2773380279541
+Validation started for epoch 9
+  0%|          | 0/1 [00:00<?, ?it/s]Validation completed for epoch 9
+  0%|          | 0/1 [00:04<?, ?it/s]
+Validation accuracy for epoch 9: 0.264375
+Validation time for this epoch: 4.928636074066162
+Early stopping, with minimum validation loss 1.5117360353469849
+
+
+
+
+Embedding = 128, hidden = 32, num_layers = 2
+Fetching data
+Fetched and Vectorized data
+Training for 10 epochs
+Training started for epoch 1
+  0%|          | 0/1000 [00:00<?, ?it/s]/Users/lishenghua/Desktop/CS5740_NLP/P3/p3-master/rnn.py:50: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  output_score)  # Remember to include the predicted unnormalized scores which should be normalized into a (log) probability distribution
+100%|██████████| 1000/1000 [06:04<00:00,  2.74it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]Training completed for epoch 1
+Training accuracy for epoch 1: 0.2619375
+Training time for this epoch: 364.5191740989685
+Validation started for epoch 1
+100%|██████████| 1/1 [00:09<00:00,  9.62s/it]
+Validation completed for epoch 1
+Validation accuracy for epoch 1: 0.258125
+Validation time for this epoch: 9.620853185653687
+Training started for epoch 2
+100%|██████████| 1000/1000 [06:06<00:00,  2.73it/s]
+Training completed for epoch 2
+Training accuracy for epoch 2: 0.27175
+Training time for this epoch: 366.49055528640747
+Validation started for epoch 2
+100%|██████████| 1/1 [00:09<00:00,  9.46s/it]
+Validation completed for epoch 2
+Validation accuracy for epoch 2: 0.255
+Validation time for this epoch: 9.4583899974823
+Training started for epoch 3
+100%|██████████| 1000/1000 [06:03<00:00,  2.75it/s]
+Training completed for epoch 3
+Training accuracy for epoch 3: 0.2581875
+Training time for this epoch: 363.59097695350647
+Validation started for epoch 3
+  0%|          | 0/1 [00:00<?, ?it/s]Validation completed for epoch 3
+Validation accuracy for epoch 3: 0.255625
+100%|██████████| 1/1 [00:10<00:00, 10.38s/it]
+Validation time for this epoch: 10.3836030960083
+Training started for epoch 4
+100%|██████████| 1000/1000 [06:06<00:00,  2.73it/s]
+Training completed for epoch 4
+Training accuracy for epoch 4: 0.2601875
+Training time for this epoch: 366.11427092552185
+  0%|          | 0/1 [00:00<?, ?it/s]Validation started for epoch 4
+100%|██████████| 1/1 [00:09<00:00,  9.03s/it]
+Validation completed for epoch 4
+Validation accuracy for epoch 4: 0.2025
+Validation time for this epoch: 9.028985261917114
+  0%|          | 0/1000 [00:00<?, ?it/s]Training started for epoch 5
+100%|██████████| 1000/1000 [06:30<00:00,  2.56it/s]
+Training completed for epoch 5
+Training accuracy for epoch 5: 0.233125
+Training time for this epoch: 390.2512209415436
+Validation started for epoch 5
+100%|██████████| 1/1 [00:10<00:00, 10.06s/it]
+Validation completed for epoch 5
+Validation accuracy for epoch 5: 0.2675
+Validation time for this epoch: 10.06667184829712
+Training started for epoch 6
+100%|██████████| 1000/1000 [06:16<00:00,  2.65it/s]
+Training completed for epoch 6
+Training accuracy for epoch 6: 0.2684375
+Training time for this epoch: 376.74409198760986
+Validation started for epoch 6
+  0%|          | 0/1 [00:09<?, ?it/s]
+Validation completed for epoch 6
+Validation accuracy for epoch 6: 0.236875
+Validation time for this epoch: 9.79661512374878
+Early stopping, with minimum validation loss 1.5608857870101929
+
+
+
+
+Embedding = 128, hidden = 64, num_layers = 2
+Training started for epoch 1
+  0%|          | 0/1000 [00:00<?, ?it/s]/Users/lishenghua/Desktop/CS5740_NLP/P3/p3-master/rnn.py:50: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  output_score)  # Remember to include the predicted unnormalized scores which should be normalized into a (log) probability distribution
+100%|██████████| 1000/1000 [06:06<00:00,  2.73it/s]
+Training completed for epoch 1
+Training accuracy for epoch 1: 0.279875
+Training time for this epoch: 366.031192779541
+Validation started for epoch 1
+100%|██████████| 1/1 [00:09<00:00,  9.22s/it]
+Validation completed for epoch 1
+Validation accuracy for epoch 1: 0.2225
+Validation time for this epoch: 9.225699663162231
+Training started for epoch 2
+100%|██████████| 1000/1000 [06:05<00:00,  2.74it/s]
+Training completed for epoch 2
+Training accuracy for epoch 2: 0.2325625
+Training time for this epoch: 365.2623109817505
+Validation started for epoch 2
+100%|██████████| 1/1 [00:10<00:00, 10.45s/it]
+Validation completed for epoch 2
+Validation accuracy for epoch 2: 0.2525
+Validation time for this epoch: 10.448538780212402
+Training started for epoch 3
+100%|██████████| 1000/1000 [36:16<00:00,  2.18s/it]
+Training completed for epoch 3
+Training accuracy for epoch 3: 0.2698125
+Training time for this epoch: 2176.5728051662445
+Validation started for epoch 3
+100%|██████████| 1/1 [00:11<00:00, 11.64s/it]
+Validation completed for epoch 3
+Validation accuracy for epoch 3: 0.296875
+Validation time for this epoch: 11.637223958969116
+Training started for epoch 4
+100%|██████████| 1000/1000 [05:59<00:00,  2.78it/s]
+Training completed for epoch 4
+Training accuracy for epoch 4: 0.2924375
+Training time for this epoch: 359.79043984413147
+Validation started for epoch 4
+100%|██████████| 1/1 [00:10<00:00, 10.79s/it]
+Validation completed for epoch 4
+Validation accuracy for epoch 4: 0.301875
+Validation time for this epoch: 10.78988003730774
+Training started for epoch 5
+100%|██████████| 1000/1000 [06:32<00:00,  2.55it/s]
+Training completed for epoch 5
+Training accuracy for epoch 5: 0.304125
+Training time for this epoch: 392.5406639575958
+Validation started for epoch 5
+100%|██████████| 1/1 [00:10<00:00, 10.05s/it]
+Validation completed for epoch 5
+Validation accuracy for epoch 5: 0.256875
+Validation time for this epoch: 10.053160905838013
+Training started for epoch 6
+100%|██████████| 1000/1000 [06:52<00:00,  2.42it/s]
+Training completed for epoch 6
+Training accuracy for epoch 6: 0.29875
+Training time for this epoch: 412.66971707344055
+Validation started for epoch 6
+100%|██████████| 1/1 [00:11<00:00, 11.81s/it]
+Validation completed for epoch 6
+Validation accuracy for epoch 6: 0.326875
+Validation time for this epoch: 11.814872026443481
+Training started for epoch 7
+100%|██████████| 1000/1000 [06:48<00:00,  2.45it/s]
+Training completed for epoch 7
+Training accuracy for epoch 7: 0.3121875
+Training time for this epoch: 408.8101451396942
+Validation started for epoch 7
+100%|██████████| 1/1 [00:10<00:00, 10.14s/it]
+Validation completed for epoch 7
+Validation accuracy for epoch 7: 0.28625
+Validation time for this epoch: 10.137213945388794
+Training started for epoch 8
+100%|██████████| 1000/1000 [06:55<00:00,  2.41it/s]
+Training completed for epoch 8
+Training accuracy for epoch 8: 0.2940625
+Training time for this epoch: 415.15872502326965
+Validation started for epoch 8
+100%|██████████| 1/1 [00:10<00:00, 10.12s/it]
+Validation completed for epoch 8
+Validation accuracy for epoch 8: 0.278125
+Validation time for this epoch: 10.117370128631592
+Training started for epoch 9
+100%|██████████| 1000/1000 [06:51<00:00,  2.43it/s]
+Training completed for epoch 9
+Training accuracy for epoch 9: 0.2930625
+Training time for this epoch: 412.00592017173767
+Validation started for epoch 9
+100%|██████████| 1/1 [00:10<00:00, 10.32s/it]
+Validation completed for epoch 9
+Validation accuracy for epoch 9: 0.28875
+Validation time for this epoch: 10.319281816482544
+Training started for epoch 10
+100%|██████████| 1000/1000 [06:57<00:00,  2.40it/s]
+Training completed for epoch 10
+Training accuracy for epoch 10: 0.29125
+Training time for this epoch: 417.01410722732544
+Validation started for epoch 10
+100%|██████████| 1/1 [00:10<00:00, 10.74s/it]
+Validation completed for epoch 10
+Validation accuracy for epoch 10: 0.2625
+Validation time for this epoch: 10.740962028503418

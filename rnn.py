@@ -63,7 +63,7 @@ def convert_to_vector_representation(data, word2vec_model):
 		vectorized_data.append((torch.from_numpy(np.array(temp_vectorized)), temp[1]))
 	return vectorized_data
 
-# choose embedding_dim = 128, hidden_dim = 32, number_of_epochs = 10
+# choose embedding_dim = 128, hidden_dim = 32, number_of_epochs = 10, num_layers = 1
 def main(embedding_dim, hidden_dim, number_of_epochs, num_layers): # Add relevant parameters
 	print("Fetching data")
 	train_data, valid_data = fetch_data() # X_data is a list of pairs (document, y); y in {0,1,2,3,4}
@@ -75,7 +75,6 @@ def main(embedding_dim, hidden_dim, number_of_epochs, num_layers): # Add relevan
 		temp_list.append(data[0])
 	word2vec_model = Word2Vec(temp_list, size = embedding_dim, window = 5, min_count = 1)
 	vectorized_train = convert_to_vector_representation(train_data, word2vec_model)
-	# or change to handle unk in validation data
 	vectorized_valid = convert_to_vector_representation(valid_data, word2vec_model)
 
 	print("Fetched and Vectorized data")
@@ -91,7 +90,7 @@ def main(embedding_dim, hidden_dim, number_of_epochs, num_layers): # Add relevan
 	# similar to ffnn1fix.py, make some changes in validation part, also check the early stopping condition
 	model = RNN(embedding_dim, hidden_dim, num_layers) # Fill in parameters
 	optimizer = optim.SGD(model.parameters(),lr=0.01, momentum=0.9)
-	#optimizer = optim.Adam(model.parameters(), lr=0.01)
+	#optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 	# early stopping condition
 	min_valid_loss = 1e10 # keep track of the minimum validation loss
